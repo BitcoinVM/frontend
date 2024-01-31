@@ -259,7 +259,7 @@ const TokenPageContent = () => {
         tagsBefore={ [
           tokenQuery.data ? { label: tokenQuery.data?.type, display_name: tokenQuery.data?.type } : undefined,
           config.features.bridgedTokens.isEnabled && tokenQuery.data?.is_bridged ?
-            { label: 'bridged', display_name: 'Bridged', colorScheme: 'blue', variant: 'solid' } :
+            { label: 'bridged', display_name: 'Bridged', colorScheme: 'yellow', variant: 'solid' } :
             undefined,
         ] }
         tagsAfter={

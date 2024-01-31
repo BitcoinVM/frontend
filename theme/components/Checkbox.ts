@@ -14,7 +14,6 @@ const $size = cssVar('checkbox-size');
 
 const baseStyleControl = defineStyle((props) => {
   const { colorScheme: c } = props;
-
   return {
     _checked: {
       bg: mode(`${ c }.500`, `${ c }.300`)(props),
@@ -61,6 +60,9 @@ const baseStyle = definePartsStyle((props) => ({
 const Checkbox = defineMultiStyleConfig({
   baseStyle,
   sizes,
+  defaultProps: {
+    colorScheme: 'yellow',
+  },
 });
 
 export default Checkbox;
