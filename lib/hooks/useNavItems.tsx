@@ -132,12 +132,12 @@ export default function useNavItems(): ReturnType {
       !config.UI.sidebar.hiddenLinks?.rpc_api && {
         text: 'RPC API',
         icon: 'RPC',
-        url: 'https://docs.blockscout.com/for-users/api/rpc-endpoints',
+        url: 'https://www.quicknode.com/docs/ethereum/debug_traceTransaction',
       },
       !config.UI.sidebar.hiddenLinks?.eth_rpc_api && {
         text: 'Eth RPC API',
         icon: 'RPC',
-        url: ' https://docs.blockscout.com/for-users/api/eth-rpc',
+        url: 'https://ethereum.github.io/execution-apis/api-documentation',
       },
     ].filter(Boolean);
 

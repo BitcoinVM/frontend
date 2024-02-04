@@ -32,12 +32,6 @@ const Footer = () => {
   // const issueUrl = useIssueUrl(backendVersionData?.backend_version);
   const BITCOINVM_LINKS = [
     {
-      icon: 'social/git' as const,
-      iconSize: '18px',
-      text: 'Github',
-      url: 'https://github.com/BitcoinVM/frontend/',
-    },
-    {
       icon: 'social/tweet' as const,
       iconSize: '18px',
       text: 'Twitter',
