@@ -132,13 +132,13 @@ export default function useNavItems(): ReturnType {
       !config.UI.sidebar.hiddenLinks?.rpc_api && {
         text: 'RPC API',
         icon: 'RPC',
-        url: 'https://www.quicknode.com/docs/ethereum/debug_traceTransaction',
+        url: 'https://bitcoinvm.gitbook.io/bitcoinvm-docs/bitcoinvm/overview',
       },
-      !config.UI.sidebar.hiddenLinks?.eth_rpc_api && {
-        text: 'Eth RPC API',
-        icon: 'RPC',
-        url: 'https://ethereum.github.io/execution-apis/api-documentation',
-      },
+      // !config.UI.sidebar.hiddenLinks?.eth_rpc_api && {
+      //   text: 'Eth RPC API',
+      //   icon: 'RPC',
+      //   url: 'https://ethereum.github.io/execution-apis/api-documentation',
+      // },
     ].filter(Boolean);
 
     const mainNavItems: ReturnType['mainNavItems'] = [
