@@ -35,20 +35,20 @@ const Footer = () => {
       icon: 'social/tweet' as const,
       iconSize: '18px',
       text: 'Twitter',
-      url: 'https://twitter.com/BitcoinCats1Cat',
+      url: 'https://twitter.com/BitcoinVM_BVM',
     },
-    {
-      icon: 'social/discord' as const,
-      iconSize: '24px',
-      text: 'Discord',
-      url: 'https://discord.com/invite/bitcoincats',
-    },
-    {
-      icon: 'social/telega' as const,
-      iconSize: '20px',
-      text: 'Telegram',
-      url: 'https://t.me/BitcoinCats1CAT',
-    },
+    // {
+    //   icon: 'social/discord' as const,
+    //   iconSize: '24px',
+    //   text: 'Discord',
+    //   url: 'https://discord.com/invite/bitcoincats',
+    // },
+    // {
+    //   icon: 'social/telega' as const,
+    //   iconSize: '20px',
+    //   text: 'Telegram',
+    //   url: 'https://t.me/BitcoinCats1CAT',
+    // },
   ];
 
   const frontendLink = (() => {
