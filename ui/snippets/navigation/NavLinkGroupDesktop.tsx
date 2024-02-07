@@ -32,7 +32,7 @@ const NavLinkGroupDesktop = ({ item, isCollapsed }: Props) => {
     <Accordion defaultIndex={ [ 0 ] } allowMultiple w="100%">
       <AccordionItem>
         <h2>
-          <AccordionButton>
+          <AccordionButton ml="-15px">
             <Link
               { ...styleProps.itemProps }
               w={{ lg: isExpanded ? '180px' : '60px', xl: isCollapsed ? '60px' : '180px' }}
@@ -70,7 +70,7 @@ const NavLinkGroupDesktop = ({ item, isCollapsed }: Props) => {
                 { subItem.map(subSubItem => <NavLink key={ subSubItem.text } item={ subSubItem } isCollapsed={ false }/>) }
               </Box>
             ) :
-              <NavLink key={ subItem.text } item={ subItem } isCollapsed={ false }/>,
+              <NavLink key={ subItem.text } item={ subItem } isCollapsed={ isCollapsed }/>,
             ) }
           </VStack>
         </AccordionPanel>

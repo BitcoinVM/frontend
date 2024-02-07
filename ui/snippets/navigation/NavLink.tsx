@@ -38,7 +38,7 @@ const NavLink = ({ item, isCollapsed, px, className, onClick }: Props) => {
       href={ href }
       target={ isInternalLink ? '_self' : '_blank' }
       { ...styleProps.itemProps }
-      w={{ base: '100%', lg: isExpanded ? '100%' : '60px', xl: isCollapsed ? '60px' : '100%' }}
+      w={{ base: '100%', lg: isExpanded ? '100px' : '60px', xl: isCollapsed ? '60px' : '180px' }}
       display="flex"
       px={ px || { base: 3, lg: isExpanded ? 3 : '15px', xl: isCollapsed ? '15px' : 3 } }
       aria-label={ `${ item.text } link` }
