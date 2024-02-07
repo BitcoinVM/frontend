@@ -1,3 +1,4 @@
+import Accordion from './Accordion';
 import Alert from './Alert/Alert';
 import Badge from './Badge';
 import Button from './Button/Button';
@@ -48,6 +49,7 @@ const components = {
   Text,
   Textarea,
   Tooltip,
+  Accordion,
 };
 
 export default components;
