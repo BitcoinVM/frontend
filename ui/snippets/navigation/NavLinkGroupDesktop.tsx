@@ -70,7 +70,7 @@ const NavLinkGroupDesktop = ({ item, isCollapsed }: Props) => {
                 { subItem.map(subSubItem => <NavLink key={ subSubItem.text } item={ subSubItem } isCollapsed={ false }/>) }
               </Box>
             ) :
-              <NavLink key={ subItem.text } item={ subItem } isCollapsed={ isCollapsed }/>,
+              <NavLink ml="-15px" key={ subItem.text } item={ subItem } isCollapsed={ isCollapsed }/>,
             ) }
           </VStack>
         </AccordionPanel>
