@@ -22,24 +22,26 @@ import useNavLinkStyleProps from './useNavLinkStyleProps';
 type Props = {
   item: NavGroupItem;
   isCollapsed?: boolean;
-  onChange: () => void;
+  onChange?: () => void;
 }
 
 const NavLinkGroupDesktop = ({ item, isCollapsed, onChange }: Props) => {
   const isExpanded = isCollapsed === false;
-  const defaultIndex = isCollapsed ? [] : [ 0 ];
+  const defaultIndex = isCollapsed ? [] : undefined;
 
   const styleProps = useNavLinkStyleProps({ isCollapsed, isExpanded, isActive: item.isActive });
 
   const handleChange = React.useCallback(() => {
-    onChange();
+    if (typeof onChange === 'function') {
+      onChange();
+    }
   }, [ onChange ]);
 
   return (
-    <Accordion index={ defaultIndex } allowMultiple w="100%">
+    <Accordion defaultIndex={ [ 0 ] } index={ defaultIndex } allowMultiple w="100%" >
       <AccordionItem>
         <h2>
-          <AccordionButton ml="-15px" onClick={ handleChange }>
+          <AccordionButton ml="-15px">
             <Link
               { ...styleProps.itemProps }
               w={{ lg: isExpanded ? '180px' : '60px', xl: isCollapsed ? '60px' : '180px' }}
@@ -49,7 +51,7 @@ const NavLinkGroupDesktop = ({ item, isCollapsed, onChange }: Props) => {
               position="relative"
             >
               <HStack spacing={ 3 } overflow="hidden">
-                <NavLinkIcon item={ item }/>
+                <NavLinkIcon item={ item } onChange={ handleChange }/>
                 <Text
                   { ...styleProps.textProps }
                 >
