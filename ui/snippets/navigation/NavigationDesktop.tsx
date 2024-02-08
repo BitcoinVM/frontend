@@ -86,7 +86,7 @@ const NavigationDesktop = () => {
         <VStack as="ul" spacing="1" alignItems="flex-start">
           { mainNavItems.map((item) => {
             if (isGroupItem(item)) {
-              return <NavLinkGroupDesktop key={ item.text } item={ item } isCollapsed={ isCollapsed }/>;
+              return <NavLinkGroupDesktop key={ item.text } item={ item } isCollapsed={ isCollapsed } onChange={ handleTogglerClick }/>;
             } else {
               return <NavLink key={ item.text } item={ item } isCollapsed={ isCollapsed }/>;
             }
@@ -113,7 +113,7 @@ const NavigationDesktop = () => {
         transformOrigin="center"
         position="absolute"
         top="104px"
-        left={{ lg: isExpanded ? '235px' : '80px', xl: isCollapsed ? '80px' : '235px' }}
+        left={{ lg: isExpanded ? '250px' : '80px', xl: isCollapsed ? '80px' : '250px' }}
         cursor="pointer"
         onClick={ handleTogglerClick }
         aria-label="Expand/Collapse menu"

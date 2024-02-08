@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import {
   Text,
   HStack,
@@ -21,18 +22,24 @@ import useNavLinkStyleProps from './useNavLinkStyleProps';
 type Props = {
   item: NavGroupItem;
   isCollapsed?: boolean;
+  onChange: () => void;
 }
 
-const NavLinkGroupDesktop = ({ item, isCollapsed }: Props) => {
+const NavLinkGroupDesktop = ({ item, isCollapsed, onChange }: Props) => {
   const isExpanded = isCollapsed === false;
+  const defaultIndex = isCollapsed ? [] : [ 0 ];
 
   const styleProps = useNavLinkStyleProps({ isCollapsed, isExpanded, isActive: item.isActive });
 
+  const handleChange = React.useCallback(() => {
+    onChange();
+  }, [ onChange ]);
+
   return (
-    <Accordion defaultIndex={ [ 0 ] } allowMultiple w="100%">
+    <Accordion index={ defaultIndex } allowMultiple w="100%">
       <AccordionItem>
         <h2>
-          <AccordionButton ml="-15px">
+          <AccordionButton ml="-15px" onClick={ handleChange }>
             <Link
               { ...styleProps.itemProps }
               w={{ lg: isExpanded ? '180px' : '60px', xl: isCollapsed ? '60px' : '180px' }}
@@ -70,7 +77,7 @@ const NavLinkGroupDesktop = ({ item, isCollapsed }: Props) => {
                 { subItem.map(subSubItem => <NavLink key={ subSubItem.text } item={ subSubItem } isCollapsed={ false }/>) }
               </Box>
             ) :
-              <NavLink ml="-15px" key={ subItem.text } item={ subItem } isCollapsed={ isCollapsed }/>,
+              <NavLink key={ subItem.text } item={ subItem } isCollapsed={ isCollapsed }/>,
             ) }
           </VStack>
         </AccordionPanel>
