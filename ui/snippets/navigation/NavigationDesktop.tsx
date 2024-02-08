@@ -113,7 +113,7 @@ const NavigationDesktop = () => {
         transformOrigin="center"
         position="absolute"
         top="104px"
-        left={{ lg: isExpanded ? '250px' : '80px', xl: isCollapsed ? '80px' : '250px' }}
+        left={{ lg: isExpanded ? '248px' : '80px', xl: isCollapsed ? '80px' : '248px' }}
         cursor="pointer"
         onClick={ handleTogglerClick }
         aria-label="Expand/Collapse menu"
