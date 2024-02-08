@@ -51,7 +51,7 @@ const NavLinkGroupDesktop = ({ item, isCollapsed, onChange }: Props) => {
               position="relative"
             >
               <HStack spacing={ 3 } overflow="hidden">
-                <NavLinkIcon item={ item } onChange={ handleChange }/>
+                <NavLinkIcon item={ item } onChange={ isExpanded ? undefined : handleChange }/>
                 <Text
                   { ...styleProps.textProps }
                 >
