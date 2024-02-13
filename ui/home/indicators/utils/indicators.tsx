@@ -7,23 +7,23 @@ import { sortByDateDesc } from 'ui/shared/chart/utils/sorts';
 import * as TokenEntity from 'ui/shared/entities/token/TokenEntity';
 import IconSvg from 'ui/shared/IconSvg';
 
-const dailyTxsIndicator: TChainIndicator<'homepage_chart_txs'> = {
-  id: 'daily_txs',
-  title: 'Daily transactions',
-  value: (stats) => Number(stats.transactions_today).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
-  icon: <IconSvg name="transactions" boxSize={ 6 } bgColor="#56ACD1" borderRadius="base" color="white"/>,
-  hint: `Number of transactions yesterday (0:00 - 23:59 UTC). The chart displays daily transactions for the past 30 days.`,
-  api: {
-    resourceName: 'homepage_chart_txs',
-    dataFn: (response) => ([ {
-      items: response.chart_data
-        .map((item) => ({ date: new Date(item.date), value: item.tx_count }))
-        .sort(sortByDateDesc),
-      name: 'Tx/day',
-      valueFormatter: (x: number) => x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
-    } ]),
-  },
-};
+// const dailyTxsIndicator: TChainIndicator<'homepage_chart_txs'> = {
+//   id: 'daily_txs',
+//   title: 'Daily transactions',
+//   value: (stats) => Number(stats.transactions_today).toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
+//   icon: <IconSvg name="transactions" boxSize={ 6 } bgColor="#56ACD1" borderRadius="base" color="white"/>,
+//   hint: `Number of transactions yesterday (0:00 - 23:59 UTC). The chart displays daily transactions for the past 30 days.`,
+//   api: {
+//     resourceName: 'homepage_chart_txs',
+//     dataFn: (response) => ([ {
+//       items: response.chart_data
+//         .map((item) => ({ date: new Date(item.date), value: item.tx_count }))
+//         .sort(sortByDateDesc),
+//       name: 'Tx/day',
+//       valueFormatter: (x: number) => x.toLocaleString(undefined, { maximumFractionDigits: 2, notation: 'compact' }),
+//     } ]),
+//   },
+// };
 
 const nativeTokenData = {
   name: config.chain.currency.name || '',
@@ -98,7 +98,6 @@ const tvlIndicator: TChainIndicator<'homepage_chart_market'> = {
 };
 
 const INDICATORS = [
-  dailyTxsIndicator,
   coinPriceIndicator,
   marketPriceIndicator,
   tvlIndicator,
