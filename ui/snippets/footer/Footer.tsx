@@ -18,7 +18,7 @@ import getApiVersionUrl from './utils/getApiVersionUrl';
 
 const MAX_LINKS_COLUMNS = 4;
 
-// const FRONT_VERSION_URL = `https://github.com/BitcoinVM/frontend/`;
+// const FRONT_VERSION_URL = `https://github.com/1CAT/frontend/`;
 // const FRONT_COMMIT_URL = FRONT_VERSION_URL;
 
 const Footer = () => {
@@ -35,7 +35,7 @@ const Footer = () => {
       icon: 'social/tweet' as const,
       iconSize: '18px',
       text: 'Twitter',
-      url: 'https://twitter.com/BitcoinVM_BVM',
+      url: 'https://twitter.com/BitcoinCats1Cat',
     },
     // {
     //   icon: 'social/discord' as const,
@@ -94,9 +94,9 @@ const Footer = () => {
   const renderProjectInfo = React.useCallback((gridArea?: GridProps['gridArea']) => {
     return (
       <Box gridArea={ gridArea }>
-        <Text fontSize="xs" >BitcoinVM Block Explorer</Text>
+        <Text fontSize="xs" >1CAT Block Explorer</Text>
         <Text mt={ 3 } fontSize="xs">
-          BitcoinVM Block Explorer a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
+          1CAT Block Explorer a tool for inspecting and analyzing EVM based blockchains. Blockchain explorer for Ethereum Networks.
         </Text>
         <VStack spacing={ 1 } mt={ 6 } alignItems="start">
           { apiVersionUrl && (
@@ -144,7 +144,7 @@ const Footer = () => {
         >
           {
             ([
-              { title: 'BitcoinVM', links: BITCOINVM_LINKS },
+              { title: '1CAT', links: BITCOINVM_LINKS },
               ...(linksData || []),
             ])
               .slice(0, colNum)

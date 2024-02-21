@@ -61,7 +61,7 @@ const Checkbox = defineMultiStyleConfig({
   baseStyle,
   sizes,
   defaultProps: {
-    colorScheme: 'yellow',
+    colorScheme: 'green',
   },
 });
 

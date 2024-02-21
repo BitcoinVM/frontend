@@ -79,7 +79,7 @@ const TabsWithScroll = ({
     <Tabs
       className={ className }
       variant={ themeProps.variant || 'soft-rounded' }
-      colorScheme={ themeProps.colorScheme || 'yellow' }
+      colorScheme={ themeProps.colorScheme || 'green' }
       isLazy
       onChange={ handleTabChange }
       index={ activeTabIndex }

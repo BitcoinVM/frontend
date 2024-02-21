@@ -13,8 +13,8 @@ interface Props {
 
 const NetworkMenuButton = ({ isMobile, isActive, onClick, className }: Props, ref: React.ForwardedRef<HTMLButtonElement>) => {
   const defaultIconColor = useColorModeValue('gray.600', 'gray.400');
-  const bgColorMobile = useColorModeValue('yellow.50', 'gray.800');
-  const iconColorMobile = useColorModeValue('yellow.700', 'yellow.50');
+  const bgColorMobile = useColorModeValue('green.50', 'gray.800');
+  const iconColorMobile = useColorModeValue('green.700', 'green.50');
 
   return (
     <Button

@@ -16,7 +16,7 @@ function getBgColor(status?: AlertStatus) {
 
     case 'info':
     default:
-      return 'yellow.100';
+      return 'green.100';
   }
 }
 

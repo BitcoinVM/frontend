@@ -13,7 +13,7 @@ interface Props {
 
 const LogoFallback = ({ isCollapsed, isSmall }: { isCollapsed?: boolean; isSmall?: boolean }) => {
   const field = isSmall ? 'icon' : 'logo';
-  const logoColor = useColorModeValue('yellow.600', 'white');
+  const logoColor = useColorModeValue('green.600', 'white');
 
   const display = isSmall ? {
     base: 'none',
@@ -52,7 +52,7 @@ const NetworkLogo = ({ isCollapsed, onClick }: Props) => {
     <Box
       as="a"
       href={ route({ pathname: '/' }) }
-      width={{ base: '120px', lg: isCollapsed === false ? '120px' : '30px', xl: isCollapsed ? '30px' : '120px' }}
+      width={{ base: '190px', lg: isCollapsed === false ? '190px' : '30px', xl: isCollapsed ? '30px' : '190px' }}
       height={{ base: '24px', lg: isCollapsed === false ? '24px' : '30px', xl: isCollapsed ? '30px' : '24px' }}
       display="inline-flex"
       overflow="hidden"

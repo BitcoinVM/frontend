@@ -176,7 +176,7 @@ const MarketplaceAppCard = ({
             h={ 8 }
             onClick={ handleFavoriteClick }
             icon={ isFavorite ?
-              <IconSvg name="star_filled" w={ 4 } h={ 4 } color="yellow.400"/> :
+              <IconSvg name="star_filled" w={ 4 } h={ 4 } color="green.400"/> :
               <IconSvg name="star_outline" w={ 4 } h={ 4 } color="gray.300"/>
             }
           />

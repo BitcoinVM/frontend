@@ -72,7 +72,7 @@ const FullscreenChartModal = ({
             { !isZoomResetInitial && (
               <Button
                 leftIcon={ <IconSvg name="repeat_arrow" w={ 4 } h={ 4 }/> }
-                colorScheme="yellow"
+                colorScheme="green"
                 gridColumn={ 2 }
                 justifySelf="end"
                 alignSelf="top"

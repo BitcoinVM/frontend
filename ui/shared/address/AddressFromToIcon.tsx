@@ -18,8 +18,8 @@ const AddressFromToIcon = ({ isLoading, type, className }: Props) => {
       bgColor: useColorModeValue('green.50', 'green.800'),
     },
     out: {
-      color: useColorModeValue('yellow.600', 'yellow.500'),
-      bgColor: useColorModeValue('orange.50', 'yellow.900'),
+      color: useColorModeValue('green.600', 'green.500'),
+      bgColor: useColorModeValue('orange.50', 'green.900'),
     },
     self: {
       color: useColorModeValue('blackAlpha.400', 'whiteAlpha.400'),

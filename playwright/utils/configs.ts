@@ -6,7 +6,7 @@ export const viewport = {
   xl: { width: 1600, height: 1000 },
 };
 
-export const maskColor = '#4299E1'; // yellow.400
+export const maskColor = '#4299E1'; // green.400
 
 export const adsBannerSelector = '.adsbyslise';
 

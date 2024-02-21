@@ -82,7 +82,7 @@ test('customization', async({ mount }) => {
           p={ 2 }
           maxW="200px"
           borderWidth="1px"
-          borderColor="yellow.700"
+          borderColor="green.700"
         />
       </Box>
     </TestApp>,

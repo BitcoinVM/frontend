@@ -98,7 +98,7 @@ const MarketplaceAppModal = ({
             fontSize={{ base: '2xl', sm: '3xl' }}
             fontWeight="medium"
             lineHeight={ 1 }
-            color="yellow.600"
+            color="green.600"
           >
             { title }
           </Heading>
@@ -134,7 +134,7 @@ const MarketplaceAppModal = ({
                 h={ 8 }
                 onClick={ handleFavoriteClick }
                 icon={ isFavorite ?
-                  <IconSvg name="star_filled" w={ 4 } h={ 4 } color="yellow.400"/> :
+                  <IconSvg name="star_filled" w={ 4 } h={ 4 } color="green.400"/> :
                   <IconSvg name="star_outline" w={ 4 } h={ 4 } color="gray.300"/> }
               />
             </Box>
@@ -155,7 +155,7 @@ const MarketplaceAppModal = ({
           <Box marginBottom={ 2 }>
             { categories.map((category) => (
               <Tag
-                colorScheme="yellow"
+                colorScheme="green"
                 marginRight={ 2 }
                 marginBottom={ 2 }
                 key={ category }

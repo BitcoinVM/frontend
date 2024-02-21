@@ -73,7 +73,7 @@ test('customization', async({ mount }) => {
         number={ 17943507 }
         p={ 3 }
         borderWidth="1px"
-        borderColor="yellow.700"
+        borderColor="green.700"
       />
     </TestApp>,
   );

@@ -148,8 +148,8 @@ const AddressEntry = (props: EntityProps) => {
   const partsProps = _omit(props, [ 'className', 'onClick' ]);
 
   const context = useAddressHighlightContext();
-  const highlightedBgColor = useColorModeValue('yellow.50', 'yellow.900');
-  const highlightedBorderColor = useColorModeValue('yellow.200', 'yellow.600');
+  const highlightedBgColor = useColorModeValue('green.50', 'green.900');
+  const highlightedBorderColor = useColorModeValue('green.200', 'green.600');
 
   return (
     <Container

@@ -37,7 +37,7 @@ const getConfig = () => {
       },
       blockExplorers: {
         'default': {
-          name: 'BitcoinVM',
+          name: '1CAT',
           url: config.app.baseUrl,
         },
       },
@@ -65,7 +65,7 @@ const getConfig = () => {
       chains,
       themeVariables: {
         '--w3m-font-family': `${ BODY_TYPEFACE }, sans-serif`,
-        '--w3m-accent': colors.yellow[600],
+        '--w3m-accent': colors.green[600],
         '--w3m-border-radius-master': '2px',
         '--w3m-z-index': zIndices.modal,
       },

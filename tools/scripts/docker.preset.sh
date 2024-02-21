@@ -19,4 +19,4 @@ if [ ! -f "$secrets_file" ]; then
     exit 1
 fi
 
-docker run -p 3000:3000 --env-file $config_file --env-file $secrets_file BitcoinVM-frontend:local | pino-pretty
+docker run -p 3000:3000 --env-file $config_file --env-file $secrets_file 1CAT-frontend:local | pino-pretty

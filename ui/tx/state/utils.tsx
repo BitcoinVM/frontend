@@ -20,7 +20,7 @@ export function getStateElements(data: TxStateChange, isLoading?: boolean) {
     if (data.is_miner) {
       return (
         <Tooltip label="A block producer who successfully included the block into the blockchain">
-          <Tag textTransform="capitalize" colorScheme="yellow" isLoading={ isLoading }>
+          <Tag textTransform="capitalize" colorScheme="green" isLoading={ isLoading }>
             { getNetworkValidatorTitle() }
           </Tag>
         </Tooltip>
@@ -40,7 +40,7 @@ export function getStateElements(data: TxStateChange, isLoading?: boolean) {
         const text = changeDirection === 'from' ? 'Mint' : 'Burn';
         return (
           <Tooltip label="Address used in tokens mintings and burnings">
-            <Tag textTransform="capitalize" colorScheme="yellow" isLoading={ isLoading }>{ text } address</Tag>
+            <Tag textTransform="capitalize" colorScheme="green" isLoading={ isLoading }>{ text } address</Tag>
           </Tooltip>
         );
       }

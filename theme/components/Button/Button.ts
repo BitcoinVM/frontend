@@ -48,18 +48,18 @@ const variantOutline = defineStyle((props) => {
   const isGrayTheme = c === 'gray' || c === 'gray-dark';
   const color = isGrayTheme ? mode('blackAlpha.800', 'whiteAlpha.800')(props) : mode(`${ c }.600`, `${ c }.300`)(props);
   const borderColor = isGrayTheme ? mode('gray.200', 'gray.600')(props) : mode(`${ c }.600`, `${ c }.300`)(props);
-  const activeBg = isGrayTheme ? mode('yellow.50', 'gray.600')(props) : mode(`${ c }.50`, 'gray.600')(props);
+  const activeBg = isGrayTheme ? mode('green.50', 'gray.600')(props) : mode(`${ c }.50`, 'gray.600')(props);
   const activeColor = (() => {
     if (c === 'gray') {
-      return mode('yellow.600', 'gray.50')(props);
+      return mode('green.600', 'gray.50')(props);
     }
     if (c === 'gray-dark') {
-      return mode('yellow.600', 'gray.50')(props);
+      return mode('green.600', 'gray.50')(props);
     }
-    if (c === 'yellow') {
-      return mode('yellow.600', 'gray.50')(props);
+    if (c === 'green') {
+      return mode('green.600', 'gray.50')(props);
     }
-    return 'yellow.600';
+    return 'green.600';
   })();
 
   return {
@@ -216,7 +216,7 @@ const Button = defineStyleConfig({
   defaultProps: {
     variant: 'solid',
     size: 'md',
-    colorScheme: 'yellow',
+    colorScheme: 'green',
   },
 });
 
